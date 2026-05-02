@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-bottom: 2px solid #667eea;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #667eea;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .tech-badge {
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+        
+        .cta-button:hover {
+            background: #764ba2;
+        }
+        
+        .cta-button.secondary {
+            background: #764ba2;
+        }
+        
+        .cta-button.secondary:hover {
+            background: #667eea;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1.5rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .cta-button {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📚 Library Management System</h1>
+        <p>A comprehensive solution for managing library resources, members, and operations</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#tech-stack">Tech Stack</a></li>
+            <li><a href="#getting-started">Getting Started</a></li>
+            <li><a href="https://github.com/Nafis878/Library-Management-System" target="_blank">GitHub Repository</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <section id="about">
+            <h2>About</h2>
+            <p>The Library Management System is a modern, web-based application designed to streamline library operations. Built with Laravel and Blade templates, it provides a user-friendly interface for managing books, members, borrowing records, and more.</p>
+            <p style="margin-top: 1rem;">Whether you're running a small community library or a large academic institution, this system offers the tools you need to efficiently manage your library's resources.</p>
+        </section>
+        
+        <section id="features">
+            <h2>Key Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>📖 Book Management</h3>
+                    <p>Add, edit, and manage your library's book collection with detailed information including ISBN, author, publication date, and availability status.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 Member Management</h3>
+                    <p>Maintain member records, track borrowing history, and manage membership status with ease.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔄 Borrowing System</h3>
+                    <p>Track book borrowing and returns, manage due dates, and handle overdue book notifications.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Reports & Analytics</h3>
+                    <p>Generate comprehensive reports on library usage, popular books, and member activity.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔐 User Authentication</h3>
+                    <p>Secure login system with role-based access control for different types of users.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Responsive Design</h3>
+                    <p>Works seamlessly on desktop, tablet, and mobile devices for on-the-go access.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tech-stack">
+            <h2>Technology Stack</h2>
+            <p>Built with modern web technologies for reliability and maintainability:</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Laravel</span>
+                <span class="tech-badge">Blade Templates</span>
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">CSS3</span>
+            </div>
+        </section>
+        
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+            
+            <h3 style="margin-top: 1.5rem; color: #555;">Prerequisites</h3>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li>PHP 8.0 or higher</li>
+                <li>Composer</li>
+                <li>MySQL 5.7 or higher</li>
+                <li>Git</li>
+            </ul>
+            
+            <h3 style="margin-top: 1.5rem; color: #555;">Installation Steps</h3>
+            
+            <p style="margin-top: 1rem;"><strong>1. Clone the repository:</strong></p>
+            <pre><code>git clone https://github.com/Nafis878/Library-Management-System.git
+cd Library-Management-System</code></pre>
+            
+            <p style="margin-top: 1rem;"><strong>2. Install dependencies:</strong></p>
+            <pre><code>composer install</code></pre>
+            
+            <p style="margin-top: 1rem;"><strong>3. Create environment file:</strong></p>
+            <pre><code>cp .env.example .env</code></pre>
+            
+            <p style="margin-top: 1rem;"><strong>4. Generate application key:</strong></p>
+            <pre><code>php artisan key:generate</code></pre>
+            
+            <p style="margin-top: 1rem;"><strong>5. Configure database in .env file:</strong></p>
+            <pre><code>DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=library_db
+DB_USERNAME=root
+DB_PASSWORD=</code></pre>
+            
+            <p style="margin-top: 1rem;"><strong>6. Run migrations:</strong></p>
+            <pre><code>php artisan migrate</code></pre>
+            
+            <p style="margin-top: 1rem;"><strong>7. Start the development server:</strong></p>
+            <pre><code>php artisan serve</code></pre>
+            
+            <p style="margin-top: 1rem;">The application will be available at <code>http://localhost:8000</code></p>
+            
+            <div class="button-group">
+                <a href="https://github.com/Nafis878/Library-Management-System" class="cta-button">View on GitHub</a>
+                <a href="https://github.com/Nafis878/Library-Management-System#readme" class="cta-button secondary">Read Documentation</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Library Management System. Developed with ❤️ by Nafis878</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">All rights reserved.</p>
+    </footer>
+</body>
+</html>
